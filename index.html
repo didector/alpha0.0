@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ser Ali-portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="shortcut icon" href="OIG.jpg" type="image/x-icon">
+
+</head>
+<body>
+  <video autoplay muted loop id="background-video">
+      <source src="v2.mp4" type="video/mp4">
+    </video>
+  <div class="mainframe">
+    
+      <nav class="navbar">
+          <ul >
+            <li id="home" class="stretch-text "><a href="#">Home</a></li>
+            <li class="stretch-text"><a href="#">Portfolio</a></li>
+            <li class="stretch-text"><a href="https://github.com/didector">Projects</a></li>
+            
+            <li class="stretch-text"><a href="#footer">Contact Me</a></li>
+            
+          </ul>
+        </nav>
+  
+        
+        <section class="new-section">
+          <!-- changing fonts appear here -->
+        <h1 id="changing-heading"> Hello World 😊</h1> 
+  
+      <!-- <video width="320" height="240" controls>
+        <source src="v1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
+      <p>Fresher In Industry , Not In Technology......</p>
+    </section>
+  
+        <section class="image-description video-section">
+          
+          <img src="ser.jpg" alt="Image description">
+          <div class="description">
+            <h2>Ser Ali</h2>
+            <p>I am a student of Diploma in Computer Science and Technology branch. <br>My goal is to become associated with a company where <br> I can utilize my skills and gain further experience while enhancing the company's productivity and reputation. </p>
+          </div>
+        </section>
+        <nav class="navbar">
+      </nav>
+    </div>
+    <section class="image-description">
+      
+      <div class="maincon">
+        <h1 id="portfolio">AI Art Works </h1>
+        <div class="container">
+            <div class="pic">
+                <img src="pic1.jpg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+            <div class="pic">
+                <img src="pic2.jpg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+            <div class="pic">
+                <img src="pic8.jpeg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+    
+        </div>
+        <div class="container" id="container">
+            <div class="pic">
+                <img src="pic5.jpeg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+            <div class="pic">
+                <img src="pic9.jpeg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+            <div class="pic">
+                <img src="pic7.jpeg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+    
+        </div>
+        <div class="container" id="container">
+            <div class="pic">
+                <img src="pic4.jpeg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+            <div class="pic">
+                <img src="pic6.jpeg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+            <div class="pic">
+                <img src="pic10.jpeg" alt="image not found">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Culpa aut sint praesentium!</p>
+            </div>
+    
+        </div>
+    </div> 
+  </section>
+    
+    
+    <footer class="footer" id="footer">
+      </footer>
+    
+  
+      <!-- <div class="main"><div class="heading">Let's Begin The Show</div></div> -->
+  
+      <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <!-- <img src="03.jpg" alt="Your Logo"> -->
+            </div>
+            <div class="footer-links">
+              <h4>Navigation</h4> 
+              <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#Skills"><i class="fas fa-brain"></i> Skills</a></li>
+                <li><a href="#footer"><i class="fas fa-envelope"></i> Contact Me</a></li>
+                <a href="CV_SEP.docx" download class="download-button">Download</a>
+  
+              </ul>
+              
+            </div>
+            <div class="footer-social">
+              <h4>Connect with Me</h4>
+              <ul>
+                <li><a href="https://www.facebook.com/didector"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://github.com/didector"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/i_ser.ali/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/serali/"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2023 @ser_ali. All rights reserved.</p>
+          </div>
+        </footer>
+  
+  
+      <script>
+      
+      const heading = document.getElementById("changing-heading");
+        const texts = ["Hi, I am Ser Ali", "a Digital marketer", "a Trader", "a Web developer", "a Technician", "a Video editor"];
+        let currentTextIndex = 0;
+        
+        function changeText() {
+          heading.textContent = `${texts[currentTextIndex]}`;
+          currentTextIndex = (currentTextIndex + 1) % texts.length; // Cycle through the texts
+        }
+        
+        setInterval(changeText, 2000); // Change text every 2 seconds
+
+
+
+
+        </script>
+      
+</body>
+</html>

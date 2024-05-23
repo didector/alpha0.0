@@ -1,100 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Rubik+Doodle+Shadow&display=swap');
 
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 body {
-    font-family: 'lora', sans-serif;
+    font-family: 'Lora', sans-serif;
     margin: 0;
     padding: 0;
-    /* background-image: url(01.jpg); Replace with your image path */
-    background-repeat: no-repeat; /* Prevent image tiling */
-    background-size: cover; /* Scale image to cover the entire viewport */
-    background-position: center; /* Center the image horizontally and vertically */
-    position: relative; /* Create a stacking context for the video */
-   font: bold;
-   color: rgb(234, 236, 236);
-   
-   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-weight: bold;
+    color: rgb(232, 230, 215);
 }
-.mainframe{
-  padding: 0;
-  margin: 0;
-  width: 100%;
- height: 100vh;
+
+.mainframe {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .navbar {
-  font-size: 22px;
-  font-weight: bold; /* Fix the 'font:bold ;' to 'font-weight:bold;' */
-  color: #eae6e6;
-  padding: 10px 0;
-  padding-left: 22px;
-  overflow: hidden;
-  
- 
+    font-size: 22px;
+    font-weight: bold;
+    color: #b4b7b9;
+    padding: 10px 0;
+    padding-left: 22px;
+    overflow: hidden;
+    position: relative;
 }
 
 .navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li {
-  float: right;
-  cursor: pointer;
+    float: right;
+    cursor: pointer;
 }
 
 .navbar a {
-  display: block;
-  text-decoration: none;
-  padding: 10px 15px;
-  color: inherit;
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: inherit;
+}
+
+.menu-button {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 /* Make the navigation responsive */
 @media screen and (max-width: 768px) {
-  .navbar {
-      padding-left: 10px; /* Adjust padding for smaller screens */
-  }
+    .navbar {
+        padding-left: 10px;
+    }
 
-  .navbar li {
-      float: none; /* Remove float for stacking items */
-      width: 100%; /* Make the list items full width */
-      text-align: center; /* Center text for smaller screens */
-  }
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
 
-  .navbar a {
-      padding: 10px 0; /* Adjust padding for smaller screens */
-      display: inline-block; /* Display links inline */
-      width: 100%; /* Make the links full width */
-      box-sizing: border-box; /* Include padding in width calculation */
-  }
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar li {
+        float: none;
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 10px 0;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menu-button {
+        display: block;
+    }
 }
 
-  
-  /* .navbar a:hover {
-    background-color: #ddd; /* Add a gray background on hover */
-  /* } */ 
-
-  #changing-heading {
+#changing-heading {
     font-size: 44px;
     font-weight: bold;
-    text-transform: capitalize; /* Capitalize the first letter of each word */
-    animation: fade-in 1s ease-in-out; /* Add a fade-in animation */
-    color: azure;
-  }
-  
-  @keyframes fade-in {
+    text-transform: capitalize;
+    animation: fade-in 1s ease-in-out;
+    color: rgb(193, 219, 219);
+}
+
+@keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
-  }
-  
+}
 
-  .footer {
+.footer {
     background-color: #461c08;
     color: #fff;
     padding: 30px 0;
@@ -191,80 +203,77 @@ body {
     padding-top: 20px;
     border-top: 1px solid #ddd;
   }
-  .image-description {
-    /* Customize background color */
-    margin: 30px 0; /* Adjust margins for spacing */
+
+.image-description {
+    margin: 30px 0;
     padding: 20px;
-    text-align: center; /* Adjust text alignment if needed */
-  }
-  
-  .image-description img {
+    text-align: center;
+}
+
+.image-description img {
     width: 250px;
-    border-radius: 50px 40px ;
+    border-radius: 50px 40px;
     display: block;
-    margin: 0 auto; /* Center image horizontally */
-    max-width: 80%; /* Adjust maximum width of the image */
-  }
-  
-  .description {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.description {
     padding: 10px;
-  }
-  
-  .description h2 {
+}
+
+.description h2 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .description p {
+}
+
+.description p {
     font-size: 16px;
     line-height: 1.5;
-  }
-  
-  
-  
-.heading{
+}
+
+.heading {
     display: inline-block;
-    
     margin: 20px;
     height: 40px;
     width: 40vw;
     font-size: 200;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     align-items: center;
-    
 }
+
 .new-section {
     color: #fff;
     padding: 30px;
     margin-bottom: 30px;
-    text-align: center; /* Center the video and other content */
-  }
-  
-  .new-section video {
-    margin: 0 auto; /* Center the video horizontally */
+    text-align: center;
+}
+
+.new-section video {
+    margin: 0 auto;
     display: block;
-    max-width: 80%; /* Set a maximum width for responsiveness */
-  }
-  
-  .new-section h2 {
+    max-width: 80%;
+}
+
+.new-section h2 {
     font-size: 24px;
     margin-bottom: 15px;
-  }
-  
-  .new-section p {
+}
+
+.new-section p {
     font-size: 16px;
     line-height: 1.5;
-  }
-  .video-section {
-    position: relative; /* Create a stacking context for the video */
+}
+
+.video-section {
+    position: relative;
     width: 100%;
-    height: 100%; /* Adjust height as needed */
-    overflow: hidden; /* Hide video overflow */
-  }
-  
- 
-  #background-video {
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -273,161 +282,149 @@ body {
     min-width: 100%;
     min-height: 100%;
     width: 100%;
-    object-fit:cover; /* Fill the entire viewport */
-    z-index: -1; /* Place video behind other content */
-  }
-      
-      
-  .glitch-text {
-    font-family: monospace; /* Monospaced font for better effect */
-  }
-  
-  .glitch-text:hover {
+    object-fit: cover;
+    z-index: -1;
+}
+
+.glitch-text {
+    font-family: monospace;
+}
+
+.glitch-text:hover {
     animation: glitch 1s infinite;
-  }
-  
-  @keyframes glitch {
+}
+
+@keyframes glitch {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     50% {
-      transform: translateX(5px);
-      filter: blur(2px);
+        transform: translateX(5px);
+        filter: blur(2px);
     }
     100% {
-      transform: translateX(0);
-      filter: none;
+        transform: translateX(0);
+        filter: none;
     }
-  }
-  .stretch-text {
+}
+
+.stretch-text {
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .stretch-text:hover {
-    transform: scaleY(1.2); /* Stretch vertically */
-  }
-  
-  /* Variation: Shrink horizontally */
-  .shrink-text:hover {
+}
+
+.stretch-text:hover {
+    transform: scaleY(1.2);
+}
+
+.shrink-text:hover {
     transform: scaleX(0.8);
-  }
-  .skew-text {
+}
+
+.skew-text {
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .skew-text:hover {
-    transform: skew(-15deg); /* Skew to the left */
-  }
-  
-  /* Variation: Skew to the right */
-  .skew-right-text:hover {
+}
+
+.skew-text:hover {
+    transform: skew(-15deg);
+}
+
+.skew-right-text:hover {
     transform: skew(15deg);
-  }
-  .wiggle-text {
+}
+
+.wiggle-text {
     animation: wiggle 0.4s ease-in-out infinite alternate;
-  }
-  
-  @keyframes wiggle {
+}
+
+@keyframes wiggle {
     0% { transform: translateX(0); }
     40% { transform: translateX(-5px); }
     60% { transform: translateX(5px); }
     100% { transform: translateX(0); }
-  }
-  .morph-text {
+}
+
+.morph-text {
     font-size: 24px;
     transition: font-variant-numeric 0.3s ease-in-out;
-  }
-  
-  .morph-text:hover {
-    font-variant-numeric: proportional-nums; /* Morph into monospace */
-  }
-  
-  /* Variation: Morph from serif to sans-serif */
-  .morph-font-text:hover {
+}
+
+.morph-text:hover {
+    font-variant-numeric: proportional-nums;
+}
+
+.morph-font-text:hover {
     font-family: Arial, sans-serif;
-  }
-  .morph-text {
-    font-size: 24px;
-    transition: font-variant-numeric 0.3s ease-in-out;
-  }
-  
-  .morph-text:hover {
-    font-variant-numeric: proportional-nums; /* Morph into monospace */
-  }
-  
-  /* Variation: Morph from serif to sans-serif */
-  .morph-font-text:hover {
-    font-family: Arial, sans-serif;
-  }
-  .download-button {
+}
+
+.download-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-  }
-  
-  .download-button:hover {
-    background-color: #3e8e41; /* Darker green on hover */
-  }
-
-  /* .................................................................................. */
-
-.image-description{
-  width: 100%;
-  height: 190vh;
-  overflow: hidden;
 }
-.maincon{
-  margin: 10%;
-  height: auto;
+
+.download-button:hover {
+    background-color: #3e8e41;
 }
+
+.image-description {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+.maincon {
+    margin: 10%;
+    height: auto;
+}
+
 .container {
-  cursor: pointer;
-  border: 2px solid black;
-  box-sizing: border-box;
-  background-color:  #c2714c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 5% 0 5% ;
-  border-radius: 0 60% 0 90%;
+    cursor: pointer;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-color: #c2714c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5% 0 5%;
+    border-radius: 0 60% 0 90%;
 }
-.container p{
- padding: 0 15px 15px 15px;
- background-color:  rgb(13, 17, 16);
- 
+
+.container p {
+    padding: 0 15px 15px 15px;
+    background-color: rgb(13, 17, 16);
 }
-.container .pic{
-  border: 2px solid rgb(15, 215, 158);
- margin: 0 auto; 
- width: calc(90%/3);
- /* margin-left: 10px; */
- box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
- margin-bottom: 20px;
+
+.container .pic {
+    border: 2px solid rgb(15, 215, 158);
+    margin: 0 auto;
+    width: calc(90%/3);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+    margin-bottom: 20px;
 }
-.container img{
-  width: 200px;
+
+.container img {
+    width: 200px;
     height: 200px;
-
 }
-.container p{    
 
-  padding:  15px 15px 15px rgba(0,0,0,0.22);
-
+.container p {
+    padding: 15px;
+    background-color: rgba(0,0,0,0.22);
 }
-.image-description .container .pic:hover{
- width: 400px;
-  box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);;
-  transition: 0.5s;
-  background-color: black;
-  color: rgb(3, 3, 4);
- 
-} 
-.pic img:hover{
-  width:400px;
-  height: 400px;
- 
+
+.image-description .container .pic:hover {
+    width: 60%;
+    height: 350px;
+    box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
+    transition: 0.5s;
+    background-color: black;
+    color: rgb(205, 205, 217);
+}
+
+.pic img:hover {
+    width: 100%;
 }
